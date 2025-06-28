@@ -1,0 +1,88 @@
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #fff0f5;
+    color: #333;
+}
+header {
+    background-color: #d291bc;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.hero-section {
+    background-color: #f8e1f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+.hero-section .button {
+    background-color: #ba68c8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.section-padding {
+    padding: 40px 20px;
+}
+.bg-light {
+    background-color: #fce4ec;
+}
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.image-item {
+    flex: 1 1 calc(50% - 10px);
+    position: relative;
+}
+.image-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(218, 112, 214, 0.6);
+    color: white;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+.tips-grid, .course-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.tip-item {
+    margin-bottom: 20px;
+}
+.price {
+    color: #c2185b;
+    font-weight: bold;
+}
+.contact-info a {
+    color: #6a1b9a;
+}
+footer {
+    background-color: #d291bc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
