@@ -1,128 +1,18 @@
 
-body {
-    font-family: 'Cairo', sans-serif;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    background-color: #fff0f5;
-    color: #333;
-}
-
-header {
-    background-color: #d291bc;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero-section {
-    background-color: #f8e1f4;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.hero-section .button,
-.cta-button {
-    background-color: #ba68c8;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.section-padding {
-    padding: 40px 20px;
-}
-
-.bg-light {
-    background-color: #fce4ec;
-}
-
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.image-item {
-    flex: 1 1 calc(50% - 10px);
-    position: relative;
-}
-
-.image-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(218, 112, 214, 0.6);
-    color: white;
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-}
-
-.tips-grid, .course-details {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.tip-item {
-    margin-bottom: 20px;
-}
-
-.price {
-    color: #c2185b;
-    font-weight: bold;
-}
-
-.contact-info a {
-    color: #6a1b9a;
-    text-decoration: none;
-}
-
-footer {
-    background-color: #d291bc;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo-image {
-    max-width: 200px;
-    height: auto;
-}
-
-/* شهادات العملاء */
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border-right: 5px solid #ba68c8;
-}
+body{direction:rtl;font-family:Cairo,sans-serif;margin:0;padding:0}
+.section{padding:40px 20px;text-align:center}
+.bg‑light{background:#fce4ec}
+.hero-header{background:#d291bc;color:#fff;padding:20px;text-align:center}
+.hero-header .logo{max-width:180px}
+nav ul{list-style:none;padding:0;margin:15px 0}
+nav ul li{display:inline;margin:0 10px}
+nav ul li a{color:#fff;text-decoration:none;font-weight:700}
+h2{color:#880e4f;margin-bottom:15px;font-size:28px}
+.image-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+.image-grid .image-item{position:relative;flex:1 1 calc(33%‑20px);max-width:300px}
+.image-item img{width:100%;border-radius:8px}
+.overlay{position:absolute;bottom:0;width:100%;background:rgba(218,112,214,.6);color:#fff;padding:8px;border-radius:0 0 8px 8px}
+.testimonial{background:#fff;padding:20px;margin:10px auto;border-right:5px solid #ba68c8;max-width:600px;border-radius:8px;text-align:left}
+a.cta-button{background:#8e24aa;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block;transition:.3s}
+a.cta-button:hover{background:#6a1b9a}
+.footer{background:#d291bc;color:#fff;padding:15px}
