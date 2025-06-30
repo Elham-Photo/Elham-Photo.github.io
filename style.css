@@ -7,55 +7,92 @@ body {
     background-color: #fff0f5;
     color: #333;
 }
+
 header {
     background-color: #d291bc;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
+
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0 0;
 }
+
 header nav ul li {
     display: inline-block;
     margin: 0 10px;
 }
+
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
+
+h1 {
+    font-size: 36px;
+    color: #880e4f;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #ad1457;
+    margin-bottom: 15px;
+}
+
 .hero-section {
     background-color: #f8e1f4;
     padding: 40px 20px;
     text-align: center;
 }
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
 .hero-section .button {
     background-color: #ba68c8;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
+
+.hero-section .button:hover {
+    background-color: #a452b3;
+}
+
 .section-padding {
     padding: 40px 20px;
 }
+
 .bg-light {
     background-color: #fce4ec;
 }
+
 .image-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .image-item {
     flex: 1 1 calc(50% - 10px);
     position: relative;
 }
+
 .image-item img {
     width: 100%;
     border-radius: 8px;
 }
+
 .overlay {
     position: absolute;
     bottom: 0;
@@ -64,34 +101,90 @@ header nav ul li a {
     width: 100%;
     padding: 5px;
     font-size: 14px;
+    border-radius: 0 0 8px 8px;
 }
-.tips-grid, .course-details {
+
+.tips-grid {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
 }
+
 .tip-item {
     margin-bottom: 20px;
 }
+
 .price {
     color: #c2185b;
     font-weight: bold;
 }
-.contact-info a {
-    color: #6a1b9a;
-}
+
 footer {
     background-color: #d291bc;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
 .logo-container {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .logo-image {
-  max-width: 200px;
-  height: auto;
+    max-width: 200px;
+    height: auto;
+}
+
+/* شهادات العملاء */
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e1bee7;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-item span {
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+/* زر الكول تو أكشن */
+.cta-button {
+    background-color: #8e24aa;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6a1b9a;
+}
+
+/* قسم التواصل */
+#contact a {
+    color: #6a1b9a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
