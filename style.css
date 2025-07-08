@@ -2,13 +2,13 @@
 
 /* الألوان الأساسية المستخدمة في التصميم */
 :root {
-    --primary-purple: #673AB7;       /* بنفسجي أساسي */
-    --light-purple: #A357F7;         /* بنفسجي فاتح / ليلكي */
-    --dark-purple: #4527A0;          /* بنفسجي داكن */
-    --light-grey-bg: #f4f4f4;        /* رمادي فاتح للخلفيات */
+    --soft-lavender: #C6A7F2;       /* بنفسجي فاتح - Lavender */
+    --blush-pink: #F2A7D8;          /* وردي - Blush Pink */
+    --deep-lilac: #9B70E0;          /* بنفسجي أعمق قليلاً - Deep Lilac */
+    --lightest-bg: #FFF0F5;         /* وردي فاتح جداً للخلفيات - Pink Cream */
     --white-text: #ffffff;           /* أبيض للنصوص */
-    --dark-text: #333333;            /* رمادي غامق للنصوص */
-    --medium-grey-text: #555;        /* رمادي متوسط للنصوص الفرعية */
+    --dark-text-plum: #5C4B7D;       /* بنفسجي داكن للنصوص - Soft Plum */
+    --medium-text: #8E7BAE;          /* لون متوسط للنصوص الثانوية */
 }
 
 /* التنسيقات العامة للجسم والخطوط */
@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: var(--dark-text);
+    color: var(--dark-text-plum); /* لون نص أساسي جديد */
     background-color: var(--white-text); /* خلفية بيضاء */
     direction: rtl; /* اتجاه النص من اليمين لليسار */
     text-align: right; /* محاذاة النص لليمين افتراضياً */
@@ -36,14 +36,14 @@ body {
     padding: 80px 0;
 }
 
-/* خلفية رمادية فاتحة لبعض الأقسام */
+/* خلفية وردية فاتحة جداً لبعض الأقسام */
 .bg-light {
-    background-color: var(--light-grey-bg);
+    background-color: var(--lightest-bg);
 }
 
 /* تنسيقات الرأس (Header) - شريط التنقل العلوي */
 header {
-    background-color: var(--primary-purple); /* بنفسجي أساسي */
+    background-color: var(--deep-lilac); /* بنفسجي أعمق */
     color: var(--white-text);
     padding: 15px 30px;
     text-align: center;
@@ -67,7 +67,6 @@ header {
     width: auto;
     display: block;
 }
-/* لا حاجة لـ .logo img منفصلة إذا كانت .logo هي نفسها الصورة */
 
 nav ul {
     list-style: none;
@@ -89,14 +88,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--light-purple);
-    border-bottom: 2px solid var(--light-purple);
+    color: var(--soft-lavender); /* لون فاتح عند التحويم */
+    border-bottom: 2px solid var(--soft-lavender);
 }
 
 /* تنسيقات زرار (Button) - الأزرار العامة في الموقع */
 .button {
     display: inline-block;
-    background-color: var(--light-purple);
+    background-color: var(--blush-pink); /* وردي للأزرار */
     color: var(--white-text);
     padding: 12px 25px;
     text-decoration: none;
@@ -108,14 +107,15 @@ nav ul li a:hover {
 }
 
 .button:hover {
-    background-color: #8a3ee0; /* لون أغمق قليلاً عند التحويم */
+    background-color: #E08EC6; /* لون وردي أغمق قليلاً عند التحويم */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 /* قسم الرئيسية (Hero Section) */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x600/673AB7/ffffff?text=إلهام+للتصوير') no-repeat center center/cover;
+    /* يمكنك تغيير الصورة هنا لتناسب الألوان الجديدة إذا أردتِ */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/9B70E0/FFF0F5?text=إلهام+للتصوير') no-repeat center center/cover;
     color: var(--white-text);
     text-align: center;
     padding: 100px 0;
@@ -130,7 +130,7 @@ nav ul li a:hover {
     font-family: 'Dancing Script', cursive;
     font-size: 4.5em;
     margin-bottom: 15px;
-    color: var(--light-purple);
+    color: var(--soft-lavender); /* لون فاتح للعنوان الرئيسي */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -142,7 +142,7 @@ nav ul li a:hover {
 
 /* الأقسام العامة (section) - تنسيق العناوين */
 section h2 {
-    color: var(--dark-purple);
+    color: var(--deep-lilac); /* لون بنفسجي أعمق للعناوين */
     font-size: 2.5em;
     margin-bottom: 40px;
     text-align: center;
@@ -171,13 +171,13 @@ section h2 {
 }
 
 .package-item h3 {
-    color: var(--primary-purple);
+    color: var(--deep-lilac); /* لون بنفسجي أعمق */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .package-item p {
-    color: var(--medium-grey-text);
+    color: var(--medium-text); /* لون نص متوسط */
     font-size: 1em;
 }
 
@@ -188,7 +188,7 @@ section h2 {
     gap: 25px;
     padding: 20px 0;
     margin-top: 40px;
-    border-top: 1px solid var(--light-grey-bg);
+    border-top: 1px solid var(--lightest-bg); /* لون فاتح للحد الفاصل */
     padding-top: 40px;
 }
 
@@ -207,7 +207,7 @@ section h2 {
 
 .note {
     font-style: italic;
-    color: var(--medium-grey-text);
+    color: var(--medium-text); /* لون نص متوسط */
     margin-top: 30px;
     font-size: 0.9em;
 }
@@ -215,12 +215,12 @@ section h2 {
 /* قسم تصوير البورتريه النسائي (Portrait Section) */
 #portrait-section {
     text-align: center;
-    background-color: var(--primary-purple);
+    background-color: var(--blush-pink); /* وردي للخلفية */
     color: var(--white-text);
 }
 
 #portrait-section h2 {
-    color: var(--light-purple);
+    color: var(--white-text); /* أبيض لعنوان القسم */
 }
 
 #portrait-section p {
@@ -233,10 +233,10 @@ section h2 {
 /* قسم التواصل (Contact Section) */
 #contact {
     text-align: center;
-    background-color: var(--light-grey-bg);
+    background-color: var(--lightest-bg); /* وردي فاتح جداً */
 }
 #contact h2 {
-    color: var(--dark-purple);
+    color: var(--deep-lilac); /* بنفسجي أعمق */
     margin-bottom: 30px;
 }
 
@@ -251,19 +251,19 @@ section h2 {
 }
 
 .contact-info a {
-    color: var(--primary-purple);
+    color: var(--deep-lilac); /* بنفسجي أعمق للروابط */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: var(--light-purple);
+    color: var(--soft-lavender); /* لون فاتح عند التحويم */
 }
 
 /* الفوتر (Footer) */
 footer {
-    background-color: var(--dark-purple);
+    background-color: var(--deep-lilac); /* بنفسجي أعمق */
     color: var(--white-text);
     text-align: center;
     padding: 25px 10px;
