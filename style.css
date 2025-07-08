@@ -1,13 +1,14 @@
 /* هذا هو ملف تنسيق CSS لموقع إلهام للتصوير الفوتوغرافي (تخصص أطفال وبورتريه نسائي) */
 
-/* الألوان الأساسية المستخدمة في التصميم */
+/* الألوان الأساسية المستخدمة في التصميم (درجات الوردي) */
 :root {
-    --primary-light-purple: #cc94ff;    /* البنفسجي الفاتح الأساسي */
-    --soft-peach-pink: #FFD1DC;         /* وردي خوخي ناعم */
-    --light-blush-pink: #F8E8EE;        /* وردي فاتح جداً للخلفيات */
-    --deep-plum: #5C4B7D;               /* بنفسجي برقوقي غامق للنصوص والعناوين */
-    --white-text: #ffffff;              /* أبيض للنصوص */
-    --medium-grey-plum: #8E7BAE;        /* بنفسجي رمادي متوسط للنصوص الفرعية */
+    --warm-rose: #FFB6C1;        /* وردي دافئ - لون أساسي للرأس والأزرار */
+    --soft-peach: #FFDAB9;       /* وردي خوخي ناعم - للخلفيات الفاتحة */
+    --deep-raspberry: #C71585;   /* توت العليق الغامق - للعناوين والنصوص البارزة */
+    --light-pink-bg: #FFF0F5;    /* وردي فاتح جداً - لخلفيات الأقسام الفاتحة */
+    --white-text: #ffffff;       /* أبيض للنصوص */
+    --dark-rose-text: #8B0000;   /* وردي داكن للنصوص الأساسية */
+    --medium-rose-text: #CD5C5C; /* وردي متوسط للنصوص الفرعية */
 }
 
 /* التنسيقات العامة للجسم والخطوط */
@@ -16,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: var(--deep-plum); /* لون نص أساسي جديد */
+    color: var(--dark-rose-text); /* لون نص أساسي وردي داكن */
     background-color: var(--white-text); /* خلفية بيضاء */
     direction: rtl; /* اتجاه النص من اليمين لليسار */
     text-align: right; /* محاذاة النص لليمين افتراضياً */
@@ -37,12 +38,12 @@ body {
 
 /* خلفية وردية فاتحة جداً لبعض الأقسام */
 .bg-light {
-    background-color: var(--light-blush-pink);
+    background-color: var(--light-pink-bg);
 }
 
 /* تنسيقات الرأس (Header) - شريط التنقل العلوي */
 header {
-    background-color: var(--primary-light-purple); /* بنفسجي فاتح للخلفية الرئيسية */
+    background-color: var(--warm-rose); /* وردي دافئ لخلفية الرأس */
     color: var(--white-text);
     padding: 15px 30px;
     text-align: center;
@@ -62,7 +63,7 @@ header {
 }
 
 .logo {
-    height: 60px; /* حجم الشعار */
+    height: 80px; /* زيادة حجم الشعار */
     width: auto;
     display: block;
 }
@@ -87,14 +88,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--soft-peach-pink); /* وردي خوخي فاتح عند التحويم */
-    border-bottom: 2px solid var(--soft-peach-pink);
+    color: var(--soft-peach); /* وردي خوخي فاتح عند التحويم */
+    border-bottom: 2px solid var(--soft-peach);
 }
 
 /* تنسيقات زرار (Button) - الأزرار العامة في الموقع */
 .button {
     display: inline-block;
-    background-color: var(--soft-peach-pink); /* وردي خوخي للأزرار */
+    background-color: var(--deep-raspberry); /* توت العليق الغامق للأزرار */
     color: var(--white-text);
     padding: 12px 25px;
     text-decoration: none;
@@ -106,7 +107,7 @@ nav ul li a:hover {
 }
 
 .button:hover {
-    background-color: #E8A7AD; /* لون وردي أغمق قليلاً عند التحويم (Dusty Rose) */
+    background-color: #A00050; /* درجة أغمق من توت العليق عند التحويم */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
@@ -114,7 +115,7 @@ nav ul li a:hover {
 /* قسم الرئيسية (Hero Section) */
 .hero-section {
     /* يمكنك تغيير الصورة هنا لتناسب الألوان الجديدة إذا أردتِ */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600/cc94ff/ffffff?text=إلهام+للتصوير') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1500x600/FFB6C1/FFF0F5?text=إلهام+للتصوير') no-repeat center center/cover;
     color: var(--white-text);
     text-align: center;
     padding: 100px 0;
@@ -129,7 +130,7 @@ nav ul li a:hover {
     font-family: 'Dancing Script', cursive;
     font-size: 4.5em;
     margin-bottom: 15px;
-    color: var(--soft-peach-pink); /* وردي فاتح للعنوان الرئيسي */
+    color: var(--soft-peach); /* وردي خوخي فاتح للعنوان الرئيسي */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -141,7 +142,7 @@ nav ul li a:hover {
 
 /* الأقسام العامة (section) - تنسيق العناوين */
 section h2 {
-    color: var(--deep-plum); /* بنفسجي برقوقي غامق للعناوين */
+    color: var(--deep-raspberry); /* توت العليق الغامق للعناوين */
     font-size: 2.5em;
     margin-bottom: 40px;
     text-align: center;
@@ -170,13 +171,13 @@ section h2 {
 }
 
 .package-item h3 {
-    color: var(--primary-light-purple); /* بنفسجي فاتح للعناوين الفرعية */
+    color: var(--deep-raspberry); /* توت العليق الغامق للعناوين الفرعية */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .package-item p {
-    color: var(--medium-grey-plum); /* لون نص متوسط */
+    color: var(--medium-rose-text); /* وردي متوسط للنصوص */
     font-size: 1em;
 }
 
@@ -187,7 +188,7 @@ section h2 {
     gap: 25px;
     padding: 20px 0;
     margin-top: 40px;
-    border-top: 1px solid var(--light-blush-pink); /* لون فاتح للحد الفاصل */
+    border-top: 1px solid var(--soft-peach); /* وردي خوخي فاتح للحد الفاصل */
     padding-top: 40px;
 }
 
@@ -206,7 +207,7 @@ section h2 {
 
 .note {
     font-style: italic;
-    color: var(--medium-grey-plum); /* لون نص متوسط */
+    color: var(--medium-rose-text); /* وردي متوسط للنصوص */
     margin-top: 30px;
     font-size: 0.9em;
 }
@@ -214,12 +215,12 @@ section h2 {
 /* قسم تصوير البورتريه النسائي (Portrait Section) */
 #portrait-section {
     text-align: center;
-    background-color: var(--soft-peach-pink); /* وردي خوخي للخلفية */
-    color: var(--deep-plum); /* نص بنفسجي غامق على الخلفية الوردية الفاتحة */
+    background-color: var(--soft-peach); /* وردي خوخي لخلفية القسم */
+    color: var(--dark-rose-text); /* نص وردي داكن على الخلفية الفاتحة */
 }
 
 #portrait-section h2 {
-    color: var(--deep-plum); /* بنفسجي غامق لعنوان القسم */
+    color: var(--deep-raspberry); /* توت العليق الغامق لعنوان القسم */
 }
 
 #portrait-section p {
@@ -232,10 +233,10 @@ section h2 {
 /* قسم التواصل (Contact Section) */
 #contact {
     text-align: center;
-    background-color: var(--light-blush-pink); /* وردي فاتح جداً */
+    background-color: var(--light-pink-bg); /* وردي فاتح جداً */
 }
 #contact h2 {
-    color: var(--deep-plum); /* بنفسجي برقوقي غامق */
+    color: var(--deep-raspberry); /* توت العليق الغامق */
     margin-bottom: 30px;
 }
 
@@ -250,19 +251,19 @@ section h2 {
 }
 
 .contact-info a {
-    color: var(--primary-light-purple); /* بنفسجي فاتح للروابط */
+    color: var(--deep-raspberry); /* توت العليق الغامق للروابط */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: var(--soft-peach-pink); /* وردي خوخي عند التحويم */
+    color: var(--warm-rose); /* وردي دافئ عند التحويم */
 }
 
 /* الفوتر (Footer) */
 footer {
-    background-color: var(--primary-light-purple); /* بنفسجي فاتح */
+    background-color: var(--warm-rose); /* وردي دافئ */
     color: var(--white-text);
     text-align: center;
     padding: 25px 10px;
@@ -308,7 +309,7 @@ footer a {
         margin-bottom: 30px;
     }
 
-    .packages-grid, .image-gallery { /* تطبيق على معرض الأطفال أيضاً */
+    .packages-grid, .image-gallery {
         grid-template-columns: 1fr;
     }
 
