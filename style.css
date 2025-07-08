@@ -1,104 +1,342 @@
-/* الأساسيات */
-body {
-    font-family: 'Cairo', sans-serif;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    background-color: #fff0f5;
-    color: #333;
+/* هذا هو ملف تنسيق CSS لموقع إلهام للتصوير الفوتوغرافي (تخصص أطفال وبورتريه نسائي) */
+
+/* الألوان الأساسية المستخدمة في التصميم */
+:root {
+    --primary-purple: #673AB7;       /* بنفسجي أساسي */
+    --light-purple: #A357F7;         /* بنفسجي فاتح / ليلكي */
+    --dark-purple: #4527A0;          /* بنفسجي داكن */
+    --light-grey-bg: #f4f4f4;        /* رمادي فاتح للخلفيات */
+    --white-text: #ffffff;           /* أبيض للنصوص */
+    --dark-text: #333333;            /* رمادي غامق للنصوص */
+    --medium-grey-text: #555;        /* رمادي متوسط للنصوص الفرعية */
 }
 
-/* الرأس */
+/* التنسيقات العامة للجسم والخطوط */
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام خط القاهرة */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--white-text); /* خلفية بيضاء */
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    text-align: right; /* محاذاة النص لليمين افتراضياً */
+}
+
+/* تنسيقات الحاويات لتوسيط المحتوى وتحديد عرضه الأقصى */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 20px 0;
+}
+
+/* بادينج عام للأقسام */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* خلفية رمادية فاتحة لبعض الأقسام */
+.bg-light {
+    background-color: var(--light-grey-bg);
+}
+
+/* تنسيقات الرأس (Header) - شريط التنقل العلوي */
 header {
+    background-color: var(--primary-purple); /* بنفسجي أساسي */
+    color: var(--white-text);
+    padding: 15px 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d291bc;
-    padding: 15px 30px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo img {
-    height: 60px;
+.logo {
+    height: 60px; /* حجم الشعار */
+    width: auto;
+    display: block;
 }
+/* لا حاجة لـ .logo img منفصلة إذا كانت .logo هي نفسها الصورة */
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 25px;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 nav ul li a {
+    color: var(--white-text);
     text-decoration: none;
-    color: #fff;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.05em;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: var(--light-purple);
+    border-bottom: 2px solid var(--light-purple);
 }
 
-/* الأقسام */
-section {
-    padding: 60px 20px;
+/* تنسيقات زرار (Button) - الأزرار العامة في الموقع */
+.button {
+    display: inline-block;
+    background-color: var(--light-purple);
+    color: var(--white-text);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    background-color: #8a3ee0; /* لون أغمق قليلاً عند التحويم */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* قسم الرئيسية (Hero Section) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x600/673AB7/ffffff?text=إلهام+للتصوير') no-repeat center center/cover;
+    color: var(--white-text);
+    text-align: center;
+    padding: 100px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5em;
+    margin-bottom: 15px;
+    color: var(--light-purple);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.6em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* الأقسام العامة (section) - تنسيق العناوين */
+section h2 {
+    color: var(--dark-purple);
+    font-size: 2.5em;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-section h2 {
-    color: #d291bc;
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-
-.gallery {
+/* باقات تصوير الأطفال (Kids Packages) */
+.packages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.gallery img {
+.package-item {
+    background-color: var(--white-text);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.package-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.package-item h3 {
+    color: var(--primary-purple);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.package-item p {
+    color: var(--medium-grey-text);
+    font-size: 1em;
+}
+
+/* معرض الصور الخاص بالباقات (Kids Gallery) */
+.image-gallery { /* هذا خاص لعرض صور الأطفال داخل قسم الباقات */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--light-grey-bg);
+    padding-top: 40px;
+}
+
+.image-gallery img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 300px; /* ارتفاع ثابت للصور */
+    object-fit: cover; /* لضمان ملء الصورة مع الحفاظ على الأبعاد */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.image-gallery img:hover {
+    transform: scale(1.03);
 }
 
-/* الفوتر */
+.note {
+    font-style: italic;
+    color: var(--medium-grey-text);
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* قسم تصوير البورتريه النسائي (Portrait Section) */
+#portrait-section {
+    text-align: center;
+    background-color: var(--primary-purple);
+    color: var(--white-text);
+}
+
+#portrait-section h2 {
+    color: var(--light-purple);
+}
+
+#portrait-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* قسم التواصل (Contact Section) */
+#contact {
+    text-align: center;
+    background-color: var(--light-grey-bg);
+}
+#contact h2 {
+    color: var(--dark-purple);
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.15em;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--light-purple);
+}
+
+/* الفوتر (Footer) */
 footer {
-    background-color: #d291bc;
-    color: #fff;
+    background-color: var(--dark-purple);
+    color: var(--white-text);
     text-align: center;
     padding: 25px 10px;
+    font-size: 0.9em;
 }
 
 footer a {
-    color: #fff;
+    color: var(--white-text);
     text-decoration: underline;
 }
 
+/* الاستجابة لتناسب الشاشات المختلفة (Responsive Design) */
 @media (max-width: 768px) {
-    header {
+    .header-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     nav ul {
         flex-direction: column;
-        align-items: flex-start;
         gap: 15px;
+        margin-top: 20px;
     }
 
     .logo {
         margin-bottom: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .packages-grid, .image-gallery { /* تطبيق على معرض الأطفال أيضاً */
+        grid-template-columns: 1fr;
+    }
+
+    .package-item {
+        padding: 20px;
+    }
+
+    #portrait-section p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
     }
 }
